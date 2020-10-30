@@ -9,3 +9,5 @@ class TestGame(unittest.TestCase):
         self.alice = Player("Alice", "rock")
         self.game = Game(self.bob, self.alice)
 
+    def test_game_has_a_player__player1(self):
+        self.assertEqual("Bob", self.game.player1.name)
