@@ -36,3 +36,8 @@ class TestGame(unittest.TestCase):
         self.game.play_game(self.janet, self.bob)
         self.assertEqual(self.bob, self.game.play_game(self.janet, self.bob))
 
+    def test_play_game__paper_vs_rock(self):
+        self.game.play_game(self.janet, self.alice)
+        self.assertEqual(self.janet, self.game.play_game(self.janet, self.alice))
+
+
