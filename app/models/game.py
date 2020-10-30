@@ -17,4 +17,3 @@ class Game:
             return player2
         elif player1.choice == "paper" and player2.choice == "rock":
             return player1
-
