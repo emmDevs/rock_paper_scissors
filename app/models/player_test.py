@@ -1,5 +1,5 @@
 import unittest
-from models.player import player
+from app.models.player import Player
 
 class TestPlayer(unittest.TestCase):
 
@@ -7,5 +7,5 @@ class TestPlayer(unittest.TestCase):
         self.bob = Player("Bob", "scissors")
         self.alice = Player("Alice", "rock")
 
-def test_player_has_a_name(self):
-    self.assertEqual("Bob", self.player.name)
+    def test_player_has_a_name(self):
+        self.assertEqual("Bob", self.bob.name)
