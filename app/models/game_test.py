@@ -14,3 +14,8 @@ class TestGame(unittest.TestCase):
 
     def test_game_has_a_player__player2(self):
         self.assertEqual("Alice", self.game.player2.name)
+
+    def test_play_game__scissors_vs_rock(self):
+        self.game.play_game(self.bob, self.alice)
+        self.assertEqual(self.alice, self.game.play_game(self.bob, self.alice))
+
