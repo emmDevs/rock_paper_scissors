@@ -40,4 +40,19 @@ class TestGame(unittest.TestCase):
         self.game.play_game(self.janet, self.alice)
         self.assertEqual(self.janet, self.game.play_game(self.janet, self.alice))
 
+    def test_play_game__scissors_vs_scissors(self):
+        self.player2 = Player("Charlie", "scissors")
+        self.game.play_game(self.bob, self.player2)
+        self.assertEqual(None, self.game.play_game(self.bob, self.player2))
+
+    def test_play_game__rock_vs_rock(self):
+        self.player2 = Player("Charlie", "rock")
+        self.game.play_game(self.alice, self.player2)
+        self.assertEqual(None, self.game.play_game(self.alice, self.player2))
+
+    def test_play_game__paper_vs_paper(self):
+        self.player2 = Player("Charlie", "paper")
+        self.game.play_game(self.janet, self.player2)
+        self.assertEqual(None, self.game.play_game(self.janet, self.player2))
+
 
