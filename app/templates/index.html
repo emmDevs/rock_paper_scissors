@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Is this working?</h1>
+    <h1>Rock, Paper, Scissors</h1>
 
+    <section class="how-to-play">
+        <p>Rock Paper Scissors is played by two people. The idea is to make shapes with an outstretched hand where each shape will have a certain degree of power and will lead to an outcome.</p>
+    </section>
+    <div class="play-game">
+        <form class=comp-v-comp action="/computer-vs-computer">
+            <input type="submit" value="Play Game">
+        </form>
+        </div>
 {% endblock %}

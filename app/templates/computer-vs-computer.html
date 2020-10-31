@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Computer Vs Computer!</h1>
+
+    {% for player in players %}
+    <div class="players-choice">
+        <p class="players">
+            {{player.name}} chose: <b>{{player.choice}}</b>
+        </p>
+        
+    </div>
+    {% endfor %}
+    
+{% endblock%}
