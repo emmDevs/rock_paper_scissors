@@ -19,7 +19,19 @@ def computer_vs_computer():
     player2 = Player("Alice", "rock")
     players = (player1, player2)
     play_game(player1, player2)
-    winner = play_game(player1, player2)
+    if player1.choice == "scissors" and player2.choice == "paper":
+        return f" {player1.name} chose {player1.choice}. {player2.name} chose {player2.choice}.  The winner is {player1.name}."
+    elif player1.choice == "scissors" and player2.choice == "rock":
+        return f" {player1.name} chose {player1.choice}. {player2.name} chose {player2.choice}.  The winner is {player2.name}."
+    elif player1.choice == "rock" and player2.choice == "scissors":
+        return player1.name
+    elif player1.choice == "rock" and player2.choice == "paper":
+        return player2.name
+    elif player1.choice == "paper" and player2.choice == "scissors":
+        return player2.name
+    elif player1.choice == "paper" and player2.choice == "rock":
+        return player1.name
+    # winner = play_game(player1, player2)
     return render_template('computer-vs-computer.html', title="Computer Vs Computer", players=players, winner=play_game, player1=player1, player2=player2)
 
 
