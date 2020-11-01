@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <section class="main">
     <h1>Computer Vs Computer!</h1>
 
     {% for player in players %}
@@ -11,5 +12,8 @@
         
     </div>
     {% endfor %}
-    
+    <div>
+        <p> <b>The winner is {{winner}}</b></p>
+    </div>   
+    </section>
 {% endblock%}
